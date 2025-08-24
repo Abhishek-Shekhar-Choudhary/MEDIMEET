@@ -69,7 +69,7 @@ io.on('connection', (socket) => {
 })
 
 
-server.listen(process.env.port, async (req, res) => {
+server.listen(process.env.PORT, async (req, res) => {
     try {
         await connection;   // connecting to Database
         console.log("DB is connected")
@@ -77,6 +77,6 @@ server.listen(process.env.port, async (req, res) => {
     catch (error) {
         console.log("DB is not connected", error)
     }
-    console.log(`Listening at Port ${process.env.port}`)
+    console.log(`Listening at Port ${process.env.PORT}`);
 })
 
